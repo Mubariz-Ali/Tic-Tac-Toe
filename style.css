@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: dimgrey;
+    color: whitesmoke;
+    font-size: 32px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+nav ul{
+    list-style-type: none;
+}
+.GameContainer{
+    display: flex;
+    justify-content: center;
+    background-color: lavenderblush;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color:grey;
+}
+.Info{
+    padding: 0 30px;
+
+}
+.ImageBox{
+    display: none;
+}
