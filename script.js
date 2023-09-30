@@ -19,8 +19,9 @@ let win = [
 ]
 win.forEach(e => {
     if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")){
-        document.querySelector('.Info').innerText = boxtext[e[0]].innerText + "Won"
+        document.querySelector('.TurnInfo').innerText = boxtext[e[0]].innerText + " Won"
         gameover = true
+        document.querySelector('.ImageBox').getElementsByTagName('img')[0].style.width = "200px"
     }
 })
 }
@@ -38,4 +39,15 @@ Array.from(boxes).forEach(element => {
             }
         }
     })
+})
+let button = document.querySelector('.Reset')
+button.addEventListener('click', () => {
+    let boxtext = document.querySelectorAll('.boxtext');
+    Array.from(boxtext).forEach(element => {
+        element.innerText = ""
+    });
+    Turn = "X";
+    gameover = false
+    document.getElementsByClassName('TurnInfo')[0].innerText = "Turn for " + Turn;
+    document.querySelector('.ImageBox').getElementsByTagName('img')[0].style.width = "0px"
 })
